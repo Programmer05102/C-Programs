@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+void main()
+ {
+  int gd=DETECT,gm,x=50,y=50,r=50,x1=x,y1=y;
+  initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+  for(x=50;x<=580;x++)
+   {
+    circle(x,y,r);
+    setfillstyle(1,4);
+    fillellipse(x,y,r,r);
+    delay(10);
+    cleardevice();
+   }
+  for(y=50;y<=400;y++)
+   {
+    circle(x,y,r);
+    setfillstyle(1,14);
+    fillellipse(x,y,r,r);
+    delay(10);
+    cleardevice();
+   }
+  for(x;x>=50;x--)
+   {
+    circle(x,y,r);
+    setfillstyle(1,1);
+    fillellipse(x,y,r,r);
+    delay(10);
+    cleardevice();
+   }
+  for(y;y>=50;y--)
+   {
+    circle(x,y,49);
+    setfillstyle(1,2);
+    fillellipse(x,y,49,49);
+    delay(10);
+    cleardevice();
+   }
+  getch();
+  closegraph();
+ }
